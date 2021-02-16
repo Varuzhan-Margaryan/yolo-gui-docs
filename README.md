@@ -1,6 +1,6 @@
 # Yolo GUI app
 
-This app can train, evaluate and inference models such
+This app can train, evaluate and inference models such as
 yolov4, yolov4-tiny, yolov3 and yolov3-tiny.
 
 The app consists of 3 parts Training, Evaluation, Inference.
@@ -13,7 +13,7 @@ Before training, you need to collect data to train on.
 ### Data
 
 In the **data folder**, 
-there will be images and annotations to them 
+there must be images and annotations to them 
 (with the same names).
 
 for example:
@@ -28,10 +28,10 @@ data_dir/
 └── 011256.txt
 ```
 
-**Annotations** will be in standard yolo format ie ```<cls> <x> <y> <w> <h>```
+**Annotations** must be in standard yolo format ie ```<cls> <x> <y> <w> <h>```
 where cls is the index of class,
-x is the x coordinate of the center of bounding box
-divided by image width, y is the y coord divided by image height,
+x is the x coord of the center of the bounding box divided by the width of the image, 
+y is the y coord divided by image height,
 w is the width of the box divided by the image width,
 and w is the height of the box divided by the image height.
 
@@ -45,7 +45,7 @@ For example in this image annotations file will be like this
 ```
 where class 0 is the 'person' class and 1 is 'tie'.
 
-**Images** will be in '.jpg' or '.png' formats
+**Images** must be in '.jpg' or '.png' formats.
 
 
 ### Training parameters
@@ -60,11 +60,10 @@ In training page there are 7 parameters (entries).
 Path to the data folder.
 
 
-
 ***2. Weights:***
 
 Model's weights path. If you already trained a model and want to 
-continue training from last checkpoint then you don't need it.
+continue training from the last checkpoint then you don't need it.
 
 You can download coco trained weights from here.
 
@@ -84,11 +83,11 @@ yolov4, yolov4-tiny, yolov3, or yolov3-tiny
 
 Training class names separated with comas (,).
 
-NOTE: the order of classes must be must match data
+NOTE: the order of classes must match data
 
 ***5. Train Size:***
 
-The app will randomly split datta to train and test datasets.
+The app will randomly split the data to train and test datasets.
 
 This parameter specifies what is the proportions of train and test sets.
 
@@ -99,8 +98,8 @@ will be used for training and 20% for testing.
 
 Training goes with batches.
 
-How big is batch size that accurate the training will be.
-But for big batches we need a GPU with big memory.
+How large is the batch size, how high is the training accuracy.
+But for large batches, we need a GPU with large memory.
 
 ***7. Epochs***
 
